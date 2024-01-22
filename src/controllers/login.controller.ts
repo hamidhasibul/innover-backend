@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { db } from "../utils/db";
 
-export const loginHandler = async (req: Request, res: Response) => {
+const loginHandler = async (req: Request, res: Response) => {
   const { phone, password } = req.body;
   if (!phone || !password) {
     return res
@@ -64,3 +64,5 @@ export const loginHandler = async (req: Request, res: Response) => {
     return res.status(500).json({ status: "error", message: error.message });
   }
 };
+
+export { loginHandler };

@@ -4,7 +4,15 @@
     "moduleResolution": "NodeNext",
     "baseUrl": "src",
     "outDir": "dist",
-    "noImplicitAny": true
+    "rootDir": "src",
+    "noImplicitAny": true,
+    "paths": {
+      "@controllers/*": ["controllers/*"],
+      "@models/*": ["models/*"],
+      "@routes/*": ["routes/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@config/*": ["config/*"]
+    }
   },
   "include": ["src/**/*"]
 }
